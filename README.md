@@ -6,6 +6,7 @@ As reference i used this very good tutorial on youtube from "Laravel Daily" yout
 Here is a link to the playlist of the tutorial: https://www.youtube.com/playlist?list=PLdXLsjL7A9k0NlUGL9M7ah9Fnvo3HybRl
 Here are some Details:
 1. Database: 
+2. 
  1.1 Important Tables:
     a. Users
     b. Courses
