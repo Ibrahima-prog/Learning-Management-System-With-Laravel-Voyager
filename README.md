@@ -59,6 +59,8 @@ Here are some Details:
     
     Can only be created by the admin.
     Can only be edited, seen, browsed or deleted by the admin and the teacher affiliated with the course.
+    After buying a course a student can rate it.
+    Ratings are calculated and appear on the home page.
   
   c. Lessons:
    
@@ -67,6 +69,25 @@ Here are some Details:
     Only published lessons are displayed at the front end, the rest will remain hidden.
     There are free and paid for lessons, free lessons are accessible to all, their tests too but to access the other lessons,
     you will have to pay (i used stripe for testing purpose, use your own stipe key :)).
+    Non purchased lessons will not display the description.(will ask to buy the course first)
     
-  d.Questions:
+  d.Tests:
+   
+    Can be created by admin and teacher.
+    Can only be edited, seen, browsed or deleted by the admin and the teacher affiliated with the course.
+    They are available on free lessons and have scores that will be displayed after you submit the test.
+    For paid for lessons they are available after the purchase
+  e. Questions:
   
+  
+    Can be created by admin and teacher.
+    Can only be edited, seen, browsed or deleted by the admin and the teacher affiliated with the course.
+    Available on free lessons
+  f. Options:
+  
+    The options of the questions
+    Can be created by admin and teacher.
+    Can only be edited, seen, browsed or deleted by the admin and the teacher affiliated with the course.
+    Available on free lessons
+    Only 4 questions available by questions (you can change it in the code)
+    
