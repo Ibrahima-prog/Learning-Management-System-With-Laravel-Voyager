@@ -1,10 +1,16 @@
 # Learning-Management-System-With-Laravel-Voyager
 Using laravel voyager to crate a basic learning management system on laravel
+
 This project is a learnnig management system designed on laravel voyager admin panel
+
 It is mostly focused on the back-end functionalities, so it has a very basic front-end that you can modify however you want.
+
 As reference i used this very good tutorial on youtube from "Laravel Daily" youtube channel, where he used another admin panel called "Laravel Quick Admin Panel"
+
 Here is a link to the playlist of the tutorial: https://www.youtube.com/playlist?list=PLdXLsjL7A9k0NlUGL9M7ah9Fnvo3HybRl
+
 Here are some Details:
+
 1. Database: 
  
  1.1 Important Tables:
