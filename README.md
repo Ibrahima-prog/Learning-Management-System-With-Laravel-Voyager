@@ -7,7 +7,6 @@ Here is a link to the playlist of the tutorial: https://www.youtube.com/playlist
 Here are some Details:
 1. Database: 
  1.1 Important Tables:
-
     a. Users
     b. Courses
     c. Lessons
