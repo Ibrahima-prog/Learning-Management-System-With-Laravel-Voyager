@@ -26,7 +26,8 @@ Here are some Details:
   1.3 Migrations:
   
     BE CAREFUL with migrations.
-    All migrations are created but laravel voyager also have its own migrations, so put yours in a different folder and call it from that path or folder.
+    All migrations are created but laravel voyager also have its own migrations, so put yours in a different folder
+    and call it from that path or folder.
     Try not to mess around voyager's tables or backup the database before refreshing for example.
     
   1.4 Seeders:
@@ -58,7 +59,8 @@ Here are some Details:
     Can be created by admin and teacher.
     Can only be edited, seen, browsed or deleted by the admin and the teacher affiliated with the course.
     Only published lessons are displayed at the front end, the rest will remain hidden.
-    There are free and paid for lessons, free lessons are accessible to all, their tests too but to access the other lessons you will have to pay (i used stripe for testing purpose, use your own stipe key :)).
+    There are free and paid for lessons, free lessons are accessible to all, their tests too but to access the other lessons,
+    you will have to pay (i used stripe for testing purpose, use your own stipe key :)).
     
   d.Questions:
   
