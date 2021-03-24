@@ -1,0 +1,18 @@
+
+body{
+    padding-top: 0px;
+}
+  @media (max-width: 600px) {}
+
+    .navbar .container
+{
+    display: block;
+  }
+  .fixed-top{
+      position: unset;
+  }
+.row{
+    display: unset;
+}
+
+
