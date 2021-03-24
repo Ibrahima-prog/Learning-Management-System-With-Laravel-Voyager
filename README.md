@@ -1,3 +1,5 @@
+
+
 # Learning-Management-System-With-Laravel-Voyager
 Using laravel voyager to crate a basic learning management system on laravel
 
@@ -91,3 +93,5 @@ Here are some Details:
     Available on free lessons
     Only 4 questions available by questions (you can change it in the code)
     
+  Here is an sql dump file:
+  [lms_template.zip](https://github.com/Ibrahima-prog/Learning-Management-System-With-Laravel-Voyager/files/6198586/lms_template.zip)
