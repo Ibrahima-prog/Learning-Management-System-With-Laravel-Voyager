@@ -1,61 +1,97 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
 
-## About Laravel
+# Learning-Management-System-With-Laravel-Voyager
+Using laravel voyager to crate a basic learning management system on laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This project is a learnnig management system designed on laravel voyager admin panel
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+It is mostly focused on the back-end functionalities, so it has a very basic front-end that you can modify however you want.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+As reference i used this very good tutorial on youtube from "Laravel Daily" youtube channel, where he used another admin panel called "Laravel Quick Admin Panel"
 
-## Learning Laravel
+Here is a link to the playlist of the tutorial: https://www.youtube.com/playlist?list=PLdXLsjL7A9k0NlUGL9M7ah9Fnvo3HybRl
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Here is an sql dump file:  [lms_template.zip](https://github.com/Ibrahima-prog/Learning-Management-System-With-Laravel-Voyager/files/6198586/lms_template.zip)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Here are some Details:
 
-## Laravel Sponsors
+1. Database: 
+ 
+ 1.1 Important Tables:
+   
+    a. Users
+    b. Courses
+    c. Lessons
+    d. Tests
+    e. Questions
+    f. Questions Options
+  1.2 Relationships: (All Many to Many)
+  
+    a. Users - Courses
+    b. Courses - Lessons
+    c. Lessons - Tests
+    d. Tests - Questions
+    e. Questions- Options
+    
+  1.3 Migrations:
+  
+    BE CAREFUL with migrations.
+    All migrations are created but laravel voyager also have its own migrations, so put yours in a different folder
+    and call it from that path or folder.
+    Try not to mess around voyager's tables or backup the database before refreshing for example.
+    
+  1.4 Seeders:
+      
+      The Courses created will all be synced to the admin (you can change that in the CoursesSeeder.php)
+      Use The CoursesSeeder.php that i created to make:
+      5 Courses, each have
+      5 Lessons, each have
+      1 Test, each have 
+      5 Questions, each have
+      4 Options.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+2. Structure And Functionalities:
+  
+  a. Users:
+    
+    There are 3 type of users (Admin, Teacher and Student)
+    The admin have all permissions and can change the permissions of other users, he can also modify the admin panel.
+    The teacher have permission to access the following (dashboard, courses, lessons, tests, questions and options).
+    The student cannot access the admin only the front-end.
+    
+  b. Courses:
+    
+    Can only be created by the admin.
+    Can only be edited, seen, browsed or deleted by the admin and the teacher affiliated with the course.
+    After buying a course a student can rate it.
+    Ratings are calculated and appear on the home page.
+  
+  c. Lessons:
+   
+    Can be created by admin and teacher.
+    Can only be edited, seen, browsed or deleted by the admin and the teacher affiliated with the course.
+    Only published lessons are displayed at the front end, the rest will remain hidden.
+    There are free and paid for lessons, free lessons are accessible to all, their tests too but to access the other lessons,
+    you will have to pay (i used stripe for testing purpose, use your own stipe key :)).
+    Non purchased lessons will not display the description.(will ask to buy the course first)
+    
+  d.Tests:
+   
+    Can be created by admin and teacher.
+    Can only be edited, seen, browsed or deleted by the admin and the teacher affiliated with the course.
+    They are available on free lessons and have scores that will be displayed after you submit the test.
+    For paid for lessons they are available after the purchase
+  e. Questions:
+  
+  
+    Can be created by admin and teacher.
+    Can only be edited, seen, browsed or deleted by the admin and the teacher affiliated with the course.
+    Available on free lessons
+  f. Options:
+  
+    The options of the questions
+    Can be created by admin and teacher.
+    Can only be edited, seen, browsed or deleted by the admin and the teacher affiliated with the course.
+    Available on free lessons
+    Only 4 questions available by questions (you can change it in the code)
+    
