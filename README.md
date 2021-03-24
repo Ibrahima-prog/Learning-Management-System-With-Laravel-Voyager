@@ -11,6 +11,8 @@ As reference i used this very good tutorial on youtube from "Laravel Daily" yout
 
 Here is a link to the playlist of the tutorial: https://www.youtube.com/playlist?list=PLdXLsjL7A9k0NlUGL9M7ah9Fnvo3HybRl
 
+  [lms_template.zip](https://github.com/Ibrahima-prog/Learning-Management-System-With-Laravel-Voyager/files/6198586/lms_template.zip)
+
 Here are some Details:
 
 1. Database: 
@@ -94,4 +96,3 @@ Here are some Details:
     Only 4 questions available by questions (you can change it in the code)
     
   Here is an sql dump file:
-  [lms_template.zip](https://github.com/Ibrahima-prog/Learning-Management-System-With-Laravel-Voyager/files/6198586/lms_template.zip)
